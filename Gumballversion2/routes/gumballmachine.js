@@ -1,4 +1,3 @@
-
 exports.index = function(req, res){
 	res.render('index', {page_title:"index"});
 }
@@ -34,11 +33,11 @@ exports.getindividualdetails = function(req,res){
 		});
 }
 exports.newindividualdetails = function(req, res){
-		var newinddetails = JSON.parse(JSON.stringify(req.body));
+		var input = JSON.parse(JSON.stringify(req.body));
 		var data = {
 				serialNumber : input.serialNumber,
 				modelNumber : input.modelNumber,
-				countGumballs : input.countGumballs
+				countGumballs : input.count
 		}
 		console.log(data);
 		var newinddata = require('restler');

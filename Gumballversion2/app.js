@@ -28,7 +28,7 @@ if ('development' == app.get('env')) {
   app.use(express.errorHandler());
 }
 
-app.get('/', gumballmachine.inventory);
+app.get('/', gumballmachine.index);
 app.get('/list', gumballmachine.inventory);
 app.get('/getDetails/:id',gumballmachine.getindividualdetails);
 app.post('/newindividualMachine',gumballmachine.newindividualdetails);
